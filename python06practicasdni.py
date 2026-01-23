@@ -49,4 +49,4 @@ elif(num==19):
     print("La letra de tu DNI es L")
 else:
     print("La letra de tu DNI es T")
-print("Fin del programa")
+print("Fin del programa el modulo es:", num)
