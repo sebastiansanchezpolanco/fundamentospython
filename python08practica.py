@@ -1,10 +1,10 @@
 from math import floor, ceil
 print("Ejercicio de fechas")
-print("Dame el dia de nacimiento")
+print("Dame el dia que quieras")
 dia=int(input())
-print("Dame el mes de nacimiento")
+print("Dame el mes que quieras")
 mes=int(input())
-print("Dame el año de nacimiento")
+print("Dame el año que quieras")
 year=int(input())
 if(mes==1):
     mes=13
