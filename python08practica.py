@@ -29,18 +29,18 @@ result6=int(result5/7)
 #operacion7
 result7=int(result5-(result6*7))
 if(result7==0):
-    print("Sabado")
+    print("Fue un Sabado")
 elif(result7==1):
-    print("Domingo")
+    print("Fue un Domingo")
 elif(result7==2):
-    print("Lunes")
+    print("Fue un Lunes")
 elif(result7==3):
-    print("Martes")
+    print("Fue un Martes")
 elif(result7==4):
-    print("Miercoles")
+    print("Fue un Miercoles")
 elif(result7==5):
-    print("Jueves")
+    print("Fue un Jueves")
 elif(result7==6):
-    print("viernes")
+    print("Fue un viernes")
 print("fin del program")
 
