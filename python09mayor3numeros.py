@@ -37,8 +37,8 @@ sum=num1+num2+num3
 intermedio2=sum-mayor-menor
 if(mayor==num1 and menor==num2):
     intermedio3=num3
-if(mayor==num1 and menor==num2):
-    intermedio3=num3
+if(mayor==num1 and menor==num3):
+    intermedio3=num2
 if(mayor==num2 and menor==num3):
     intermedio3=num1
 if(mayor==num3 and menor==num2):
