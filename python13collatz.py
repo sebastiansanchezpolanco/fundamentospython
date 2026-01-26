@@ -12,8 +12,8 @@ else:
             numero=numero/2
         else:
             numero=3*numero+1
-        contador=+1
         print(int(numero))
+    contador=+1
     print("Fin de la secuencia")
     print(contador)
     print("-------------------")
