@@ -9,9 +9,15 @@ def primerMetodo():
     print("Primer Metodo")
 def segundoMetodo():
     print("Segundo Metodo")
+def saludar(nombre):
+    print("Bienvenido a Python Mr/Mrs" + nombre)
+def despedirse (nombre, dias):
+    print("Que tenga un buen ", dias, "Mr/Mrs", nombre)
 #Este si es el programa principal
 print("Ejemplo de metodos")
 primerMetodo()
-segundoMetodo()
+#segundoMetodo()
 primerMetodo()
+saludar("Alumno")
+despedirse("Alumno", "Martes")
 print("Fin del progrma")
