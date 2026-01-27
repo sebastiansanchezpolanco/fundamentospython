@@ -15,7 +15,7 @@ else:
     print("Dominio del correo : ", dominio)
     extencion=dominio[dominio.find(".")+1:]
     longextencion=len(extencion)
-    if(longextencion>=3 or longextencion<=2):
+    if(longextencion>3 or longextencion<=2):
         print("MAL! la extencion no existe")
     else:
         print("Extencion del correo: ", extencion)
