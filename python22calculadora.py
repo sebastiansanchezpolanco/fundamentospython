@@ -17,6 +17,11 @@ def mostrarMenu():
     print("1.- Sumar los numeros")
     print("2.- Restar del primer numero el segundo")
     print("3.- Multiplicar los numeros")  
+    print("4.- Introducir nuevos numeros")
+def getnum():
+    num=input("Introduce un numero: ")
+    num=verificaDigito(num)
+    return num
 #main
 print("Dame un primer numero")
 num1=input()
@@ -29,13 +34,21 @@ operacion=0
 print("Que quieres hacer con los numeros:")
 mostrarMenu()
 operacion=int(input())
-while operacion!=1 and operacion!=2 and operacion!=3:
-    operacion=int(input("Opcion no valida, dame un numero 1,2 o 3 "))  
-if (operacion==1):
+while operacion!=1 and operacion!=2 and operacion!=3 and operacion!=0 and operacion!=4:
+    operacion=int(input("Opcion no valida, dame un numero 0, 1, 2 o 3 "))  
+if(operacion==0):
+    print("Saliste de la aplicación")
+    resultado="Sin resultado"
+elif(operacion==1):
     resultado=sumar(num1,num2)
-elif (operacion==2):
+elif(operacion==2):
     resultado=resta(num1,num2)
-elif (operacion==3):
+elif(operacion==3):
     resultado=multi(num1,num2)
-    
+elif(operacion==4):
+    num1=getnum()
+    num2=getnum()
+    print("Que quieres hacer con los numeros:", num1, "y", num2)  
+    mostrarMenu()
+operacion=int(input())
 print(resultado)
