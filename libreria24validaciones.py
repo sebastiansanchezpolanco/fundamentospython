@@ -1,5 +1,6 @@
 def letraDNI(dni):
-    num=(int(dni))-23*(int(dni/23))
+    dni=int(dni)
+    num=(dni)-23*(int(dni/23))
     letrasdni="TRWAGMYFPDXBNJZSQVHLCKET"
     letra=letrasdni[num]
     return letra
@@ -15,16 +16,15 @@ def validacionisbn(isbn):
     else:
         return False
 def verificacionDNI():
-    dnicompleto=input("Indicame tu DNI complero (con letra)")
+    dnicompleto=input("Indicame tu DNI complero (con letra): ")
     letradni=dnicompleto[-1]
     numerodni=dnicompleto[:len(dnicompleto)-1]
     if(letradni.isalpha()==False):
         print("El ultimo valor debe ser una letra")
-    elif(numerodni.isdigit()==False):
+    if(numerodni.isdigit()==False):
         print("Los primeros caracteres del DNI deben ser digitos")
-    print(letradni)
-    print(numerodni)
-    numerodni=int(numerodni)
+    else:
+        numerodni=int(numerodni)
     if(letradni.upper()==letraDNI(numerodni)):
         return True
     else:
