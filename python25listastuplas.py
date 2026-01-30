@@ -35,3 +35,6 @@ print("Tuplas con Python")
 tupla=("Leche","Cacao","Avellanas","Azucar")
 print("tupla[1]", tupla[1])
 print(tupla)
+for i in range(len(tupla)):
+    elem=tupla[i]
+    print(elem)
