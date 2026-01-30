@@ -5,8 +5,9 @@ num1=libreria23matematicas.getnum()
 num2=libreria23matematicas.getnum()
 libreria23matematicas.mostrarMenu()
 operacion=int(input())
-while operacion!=1 and operacion!=2 and operacion!=3 and operacion!=0 and operacion!=4:
-    operacion=int(input("Opcion no valida, dame un numero 0, 1, 2 o 3 "))  
+while operacion!=0:
+    libreria23matematicas.mostrarMenu()
+    operacion=int(input("Que operacion quieres hacer, dame un numero 0, 1, 2 o 3 "))  
 if(operacion==0):
     print("Saliste de la aplicación")
     resultado="Sin resultado"
@@ -20,8 +21,6 @@ elif(operacion==4):
     num1=libreria23matematicas.getnum()
     num2=libreria23matematicas.getnum()
     print("Que quieres hacer con los numeros:", num1, "y", num2)  
-    libreria23matematicas.mostrarMenu()
-    operacion=int(input())
 print(resultado)
 
 

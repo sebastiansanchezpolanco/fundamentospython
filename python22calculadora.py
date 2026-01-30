@@ -31,14 +31,10 @@ num2=input()
 num2=verificaDigito(num2)
 resultado=0
 operacion=-1
-while operacion<=4:
-    print("Que quieres hacer con los numeros:")
+while operacion!=0:
     mostrarMenu()
     operacion=int(input())
-    if(operacion==0):
-        print("Saliste de la aplicación")
-        resultado="Sin resultado"
-    elif(operacion==1):
+    if(operacion==1):
         resultado=sumar(num1,num2)
     elif(operacion==2):
         resultado=resta(num1,num2)
@@ -47,8 +43,7 @@ while operacion<=4:
     elif(operacion==4):
         num1=getnum()
         num2=getnum()
-        print("Que quieres hacer con los numeros:", num1, "y", num2)  
-        mostrarMenu()
-        operacion=int(input())
+        print("Que quieres hacer con los numeros:")
     else:
         print("Opcion no valida, dame un numero 0, 1, 2 o 3 ") 
+        print("sin resultado")
