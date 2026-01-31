@@ -11,14 +11,14 @@ def getlist():
 print("Numero narcicistas en un rango")
 lista=getlist() 
 listanarciso=[]
-for i in lista:
+for num in lista:
     suma=0
-    digitos=str(i)
+    digitos=str(num)
     potencia=len(digitos)
     for digito in digitos:
         suma=int(digito)**potencia+suma
-    if(suma==i):
-        listanarciso.append(i)
+    if(suma==num):
+        listanarciso.append(num)
 print(listanarciso)
 
 
