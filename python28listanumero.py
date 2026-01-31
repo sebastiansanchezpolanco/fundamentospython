@@ -11,9 +11,8 @@ while(num!=-1):
     lista.append(num)
 for j in range (len(lista)):
     sumtodos=sumtodos+lista[j]
-for k in range (len(lista)):
-    if(lista[k]%2==0):
-        sumpares=sumpares+lista[k]
+    if(lista[j]%2==0):
+        sumpares=sumpares+lista[j]
         contpar=contpar+1
     else:
         sumimpares=sumimpares+lista[k]
