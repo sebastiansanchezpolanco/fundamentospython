@@ -15,7 +15,7 @@ for j in range (len(lista)):
         sumpares=sumpares+lista[j]
         contpar=contpar+1
     else:
-        sumimpares=sumimpares+lista[k]
+        sumimpares=sumtodos-sumpares
 print("Suma de todos los numeros: ",sumtodos)
 print("Numeros introduciodos: ",len(lista))
 print("Numeros pares: ", contpar)

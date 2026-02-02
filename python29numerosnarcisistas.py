@@ -8,6 +8,7 @@ def getlist():
     else:
         print("rango incorrecto")
     return lista
+#main
 print("Numero narcicistas en un rango")
 lista=getlist() 
 listanarciso=[]
