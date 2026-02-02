@@ -5,4 +5,6 @@ class Deportivo (Coche):
         self.velocidad+=100
         print("Turbo a tope")
     def getVelociadaMaxima(self)
+        velocidadCoche=super().getVelocidadMaxima()
+        return velocidadCoche+100
     
