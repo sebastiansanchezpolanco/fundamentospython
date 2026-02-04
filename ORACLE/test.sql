@@ -1,0 +1,2 @@
+select * from EMP;
+select APELLIDO, SALARIO*14 as SALARIO_ANUAL from EMP where COMISION>100000
