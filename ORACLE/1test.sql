@@ -5,6 +5,7 @@ select APELLIDO, SALARIO*14+COMISION as SALARIO_ANUAL from EMP where SALARIO*14+
 select * from EMP order by DEPT_NO, OFICIO;
 select * from ENFERMO where FECHA_NAC>'1/1/70';
 select * from ENFERMO where FECHA_NAC<'1/1/70' order by INSCRIPCION desc;
+select * from PLANTILLA;
 select * from PLANTILLA where TURNO ='M';
 select * from PLANTILLA where TURNO ='N';
 select * from DOCTOR where SALARIO*12>3000000;
