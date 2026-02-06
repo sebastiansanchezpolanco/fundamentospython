@@ -1,0 +1,52 @@
+--1
+select min(FECHA_ALT) from EMP;
+select EMP_NO, APELLIDO, FECHA_ALT 
+from EMP 
+where FECHA_ALT=(select min(FECHA_ALT) from EMP) ;
+
+--2
+select max(FECHA_ALT) from EMP;
+select EMP_NO, APELLIDO, FECHA_ALT
+from EMP 
+where FECHA_ALT=(select max(FECHA_ALT) from EMP);
+
+--3
+select OFICIO from EMP where APELLIDO='jimenez';
+select APELLIDO SALARIO 
+from EMP 
+where OFICIO=(select OFICIO from EMP where APELLIDO='jimenez');
+
+--4
+select max(SALARIO) DEPT_NO from EMP where DEPT_NO='30';
+select APELLIDO, OFICIO, SALARIO, DEPT_NO 
+from EMP 
+where SALARIO>(select max(SALARIO) DEPT_NO from EMP where DEPT_NO='30');
+
+--5
+select  PLANTILLA.APELLIDO, PLANTILLA.FUNCION as FUNCION, SALA.NOMBRE as OFICINA
+from SALA 
+inner join PLANTILLA
+on SALA.SALA_COD=PLANTILLA.SALA_COD
+and SALA.HOSPITAL_COD = PLANTILLA.HOSPITAL_COD
+union
+select EMP.APELLIDO, EMP.OFICIO, DEPT.DNOMBRE 
+from DEPT
+inner join EMP 
+on DEPT.DEPT_NO=EMP.DEPT_NO
+order by APELLIDO;
+
+--6
+select DEPT_NO, DNOMBRE from DEPT where DNOMBRE='VENTAS';
+select EMP.APELLIDO, EMP.OFICIO 
+from EMP 
+inner join DEPT
+on EMP.DEPT_NO=DEPT.DEPT_NO
+where DNOMBRE=(select DNOMBRE from DEPT where DNOMBRE='VENTAS');-- NO HAY QUE BUSCAR NADAAAAA!!!! SIMPLEMENTE PONER DNOMBRE='VENTAS' Y YA ESTA!!!! ME COMPLIQUE
+
+--7
+select avg (SALARIO) as MEDIASALARIO, APELLIDO where SALARIO > avg(SALARIO) group by APELLIDO;
+
+
+
+
+
