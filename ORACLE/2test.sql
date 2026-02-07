@@ -1,2 +1,3 @@
 select * from EMP where FECHA_ALT >'1/06/1985';
+--
 select * from SALA;
